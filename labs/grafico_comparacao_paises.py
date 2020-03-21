@@ -35,7 +35,7 @@ def build_days_column(df, minimal_cases = 1):
         df.loc[index, 'days'] = range(1, index.size + 1)
     return df
 
-def plot_country(df, country, normalize, emphasis):
+def plot_country(df, country, show_from, normalize, emphasis):
     country_df = df[df['location'] == country]
     total_cases = country_df['total_cases']
     plot = True
@@ -43,8 +43,16 @@ def plot_country(df, country, normalize, emphasis):
         population = get_country_population(country)
         if population > 0:
             total_cases = total_cases / population
+            if total_cases.max() < show_from:
+                plot = False
         else:
             plot = False
+    else:
+        if total_cases.max() < show_from:
+            plot = False
+    if country == 'Brazil':
+        plot = True
+        print("%s, %.2f%%" % (country, total_cases.max()))
     if plot:
         if emphasis:
             plt.plot(country_df['days'], total_cases, marker='o', markersize=12, linewidth=4)
@@ -53,22 +61,23 @@ def plot_country(df, country, normalize, emphasis):
     return plot
 
 def create_plot(df, minimal_cases, show_from, normalize, title=None, export_file=''):
+    # Create new plot
     plt.figure()
+
     # Get countries to show (remove World data)
-    country_df = df[df['total_cases'] >= show_from]
-    countries = country_df['location'].drop_duplicates()
+    countries = df['location'].drop_duplicates()
     countries = countries.where(countries != 'World').dropna()
 
     # Plot curves
     legend_curves = []
     for country in countries:
         emphasis = ['Brazil']
-        if plot_country(df, country, normalize, country in emphasis):
+        if plot_country(df, country, show_from, normalize, country in emphasis):
             legend_curves.append(country)
             
     # plot Brazil
     if 'Brazil' not in countries.values:
-        if plot_country(df, 'Brazil', normalize, True):
+        if plot_country(df, 'Brazil', show_from, normalize, True):
             legend_curves.append('Brazil')
     
     # Add plot information
@@ -91,5 +100,6 @@ if __name__ == '__main__':
     show_from = 2000
     df = get_covid_data()
     df = build_days_column(df, minimal_cases)
-    create_plot(df, minimal_cases, show_from, True, None, 'normalized.png')
+    create_plot(df, minimal_cases, 5e-4, True, None, 'normalized.png')
+    create_plot(df, minimal_cases, 2e-4, True, None, 'normalized2.png')
     create_plot(df, minimal_cases, show_from, False, None, 'absolute.png')
