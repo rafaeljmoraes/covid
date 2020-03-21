@@ -10,32 +10,9 @@ import matplotlib.pyplot as plt
 
 def get_country_population(country):
     url = "100005.csv"
-    df = pd.read_csv(url, sep=';')
+    df = pd.read_csv(url)
 
-    from_to = {}
-    from_to['Austria'] = 'Áustria'
-    from_to['Belgium'] = 'Bélgica'
-    from_to['Brazil'] = 'Brasil'
-    from_to['Denmark'] = 'Dinamarca'
-    from_to['France'] = 'França'
-    from_to['Germany'] = 'Alemanha'
-    from_to['Iran'] = 'Irã'
-    from_to['Italy'] = 'Itália'
-    from_to['Japan'] = 'Japão'
-    from_to['Malaysia'] = 'Malásia'
-    from_to['Netherlands'] = 'Países Baixos'
-    from_to['Norway'] = 'Noruega'
-    from_to['South Korea'] = 'Coréia do Sul'
-    from_to['Spain'] = 'Espanha'
-    from_to['Sweden'] = 'Suécia'
-    from_to['Switzerland'] = 'Suíça'
-    from_to['United Kingdom'] = 'Reino Unido'
-    from_to['United States'] = 'Estados Unidos'
-    
-    if country in from_to.keys():
-        country = from_to[country]
-    #print(df)
-    result = df[df['País'] == country]['População']
+    result = df[df['Location'] == country]['PopTotal']
     if result.empty:
         return 0
     else:
@@ -75,13 +52,8 @@ def plot_country(df, country, normalize, emphasis):
             plt.plot(country_df['days'], total_cases)
     return plot
 
-if __name__ == '__main__':
-    minimal_cases = 100
-    show_from = 2000
-    normalize = True
-    df = get_covid_data()
-    df = build_days_column(df, minimal_cases)
-
+def create_plot(df, minimal_cases, show_from, normalize, title=None, export_file=''):
+    plt.figure()
     # Get countries to show (remove World data)
     country_df = df[df['total_cases'] >= show_from]
     countries = country_df['location'].drop_duplicates()
@@ -100,8 +72,24 @@ if __name__ == '__main__':
             legend_curves.append('Brazil')
     
     # Add plot information
-    plt.title('Casos a partir do %dº caso' % minimal_cases)
+    if title:
+        plt.title(title)
+    else:
+        if normalize:
+            plt.title('Casos a partir do %dº caso\n(normalizados pela população)' % minimal_cases)
+        else:
+            plt.title('Casos a partir do %dº caso' % minimal_cases)
     plt.xlabel('Dias')
     plt.ylabel('Casos')
     plt.yscale("log")
     plt.legend(legend_curves)
+    if export_file:
+        plt.savefig(export_file)
+              
+if __name__ == '__main__':
+    minimal_cases = 100
+    show_from = 2000
+    df = get_covid_data()
+    df = build_days_column(df, minimal_cases)
+    create_plot(df, minimal_cases, show_from, True, None, 'normalized.png')
+    create_plot(df, minimal_cases, show_from, False, None, 'absolute.png')

@@ -1,193 +1,479 @@
-País;População;Ano
-China;1364270000;2014
-Índia;1295291543;2014
-Estados Unidos;318857056;2014
-Indonésia;254454778;2014
-Brasil;206077898;2014
-Paquistão;185044286;2014
-Nigéria;177475986;2014
-Bangladesh;159077513;2014
-Rússia;143819569;2014
-Japão;127131800;2014
-México;125385833;2014
-Filipinas;99138690;2014
-Etiópia;96958732;2014
-Vietnã;90730000;2014
-Egito;89579670;2014
-Alemanha;80889505;2014
-Irã;78143644;2014
-Turquia;75932348;2014
-República Democrática do Congo;74877030;2014
-Tailândia;67725979;2014
-França;66206930;2014
-Reino Unido;64510376;2014
-Itália;61336387;2014
-África do Sul;54001953;2014
-Mianmar [Birmânia];53437159;2014
-Tanzânia;51822621;2014
-Coréia do Sul;50423955;2014
-Colômbia;47791393;2014
-Espanha;46404602;2014
-Ucrânia;45362900;2014
-Quênia;44863583;2014
-Argentina;42980026;2014
-Sudão;39350274;2014
-Argélia;38934334;2014
-Polônia;37995529;2014
-Uganda;37782971;2014
-Canadá;35540419;2014
-Iraque;34812326;2014
-Marrocos;33921203;2014
-Afeganistão;31627506;2014
-Peru;30973148;2014
-Arábia Saudita;30886545;2014
-Uzbequistão;30757700;2014
-Venezuela;30693827;2014
-Malásia;29901997;2014
-Nepal;28174724;2014
-Moçambique;27216276;2014
-Gana;26786598;2014
-Iêmen;26183676;2014
-Coréia do Norte;25026772;2014
-Angola;24227524;2014
-Madagascar;23571713;2014
-Austrália;23490736;2014
-Camarões;22773014;2014
-Síria;22157800;2014
-Costa do Marfim;22157107;2014
-Sri Lanka;20639000;2014
-Romênia;19910995;2014
-Níger;19113728;2014
-Chile;17762647;2014
-Burkina Fasso;17589198;2014
-Cazaquistão;17289111;2014
-Mali;17086022;2014
-Países Baixos;16854183;2014
-Malauí;16695253;2014
-Guatemala;16015494;2014
-Equador;15902916;2014
-Zâmbia;15721343;2014
-Camboja;15328136;2014
-Zimbábue;15245855;2014
-Senegal;14672557;2014
-Chade;13587053;2014
-Guiné;12275527;2014
-Sudão do Sul;11911184;2014
-Cuba;11379111;2014
-Ruanda;11341544;2014
-Bélgica;11225207;2014
-Tunísia;10996600;2014
-Grécia;10957740;2014
-Burundi;10816860;2014
-Benin;10598482;2014
-Haiti;10572029;2014
-Bolívia;10561887;2014
-Somália;10517569;2014
-República Checa;10510566;2014
-República Dominicana;10405943;2014
-Portugal;10397393;2014
-Hungria;9861673;2014
-Suécia;9689555;2014
-Azerbaijão;9537823;2014
-Bielo-Rússia;9470000;2014
-Emirados Árabes Unidos;9086139;2014
-Áustria;8534492;2014
-Tajiquistão;8295840;2014
-Israel;8215300;2014
-Suíça;8190229;2014
-Honduras;7961680;2014
-Papua-Nova Guiné;7463577;2014
-Bulgária;7223938;2014
-Sérvia;7129428;2014
-Togo;7115163;2014
-Laos;6689300;2014
-Jordânia;6607000;2014
-Paraguai;6552518;2014
-Serra Leoa;6315627;2014
-Líbia;6258984;2014
-El Salvador;6107706;2014
-Nicarágua;6013913;2014
-Quirguistão;5834200;2014
-Dinamarca;5639565;2014
-Cingapura;5469700;2014
-Finlândia;5463596;2014
-Eslováquia;5418506;2014
-Turcomenistão;5307188;2014
-Noruega;5136475;2014
-Eritreia;5110444;2014
-República Centro-Africana;4804316;2014
-Costa Rica;4757606;2014
-Irlanda;4612719;2014
-Líbano;4546774;2014
-Nova Zelândia;4509700;2014
-República do Congo;4504962;2014
-Geórgia;4504100;2014
-Libéria;4396554;2014
-Croácia;4238389;2014
-Omã;4236057;2014
-Mauritânia;3969625;2014
-Panamá;3867535;2014
-Bósnia-Herzegóvina;3817554;2014
-Kuwait;3753121;2014
-Moldova;3556400;2014
-Uruguai;3419516;2014
-Armênia;3006154;2014
-Lituânia;2929323;2014
-Mongólia;2909871;2014
-Albânia;2894475;2014
-Jamaica;2721252;2014
-Namíbia;2402858;2014
-Botsuana;2219937;2014
-Catar;2172065;2014
-Lesoto;2109197;2014
-Macedônia;2075625;2014
-Eslovênia;2062218;2014
-Letônia;1990351;2014
-Gâmbia;1928201;2014
-Guiné-Bissau;1800513;2014
-Gabão;1687673;2014
-Bahrain;1361930;2014
-Trindade e Tobago;1354483;2014
-Estônia;1313645;2014
-Suazilândia;1269112;2014
-Maurício;1260934;2014
-Timor-Leste;1212107;2014
-Chipre;1153658;2014
-Fiji;886450;2014
-Djibuti;876174;2014
-Guiné Equatorial;820885;2014
-Ilhas Comores;769991;2014
-Butão;765008;2014
-Guiana;763893;2014
-Montenegro;621800;2014
-Ilhas Salomão;572171;2014
-Luxemburgo;556074;2014
-Suriname;538248;2014
-Cabo Verde;513906;2014
-Malta;427404;2014
-Brunei;417394;2014
-Maldivas;401000;2014
-Bahamas;383054;2014
-Belize;351706;2014
-Islândia;327589;2014
-Barbados;283380;2014
-Vanuatu;258883;2014
-Samoa;191845;2014
-São Tomé e Príncipe;186342;2014
-Santa Lúcia;183645;2014
-Quiribati;110470;2014
-São Vincente e Granadinas;109360;2014
-Granada;106349;2014
-Tonga;105586;2014
-Micronésia;104044;2014
-Ilhas Seychelles;91526;2014
-Antígua e Barbuda;90900;2014
-Andorra;72786;2014
-Dominica;72341;2014
-São Cristóvão e Névis;54944;2014
-Ilhas Marshall;52898;2014
-Mônaco;37623;2014
-Lichtenstein;37286;2014
-San Marino;31595;2014
-Palau;21097;2014
-Tuvalu;9893;2014
+Location,Time,PopTotal
+Location,Time,PopTotal
+Afghanistan,2019,38041757
+Africa,2019,1308064176
+African Group,2019,1306320572
+African Union,2019,1306903030
+African Union: Central Africa,2019,154013705
+African Union: Eastern Africa,2019,382531219
+African Union: Northern Africa,2019,203493226
+African Union: Southern Africa,2019,179956492
+African Union: Western Africa,2019,386908388
+"African, Caribbean and Pacific (ACP) Group of States",2019,1150190575
+Albania,2019,2880913
+Algeria,2019,43053054
+American Samoa,2019,55312
+Andean Community,2019,111736664
+Andorra,2019,77146
+Angola,2019,31825299
+Anguilla,2019,14872
+Antigua and Barbuda,2019,97115
+Argentina,2019,44780675
+Armenia,2019,2957728
+Aruba,2019,106310
+Asia,2019,4601371266
+Asia-Pacific Economic Cooperation (APEC),2019,2956245278
+Asia-Pacific Group,2019,4582136259
+Association of Southeast Asian Nations (ASEAN),2019,660718726
+Australia,2019,25203200
+Australia/New Zealand,2019,29986262
+Austria,2019,8955108
+Azerbaijan,2019,10047719
+BRIC,2019,3157123227
+BRICS,2019,3215681494
+Bahamas,2019,389486
+Bahrain,2019,1641164
+Bangladesh,2019,163046173
+Barbados,2019,287021
+Belarus,2019,9452409
+Belgium,2019,11539326
+Belize,2019,390351
+Belt-Road Initiative (BRI),2019,3353564722
+Belt-Road Initiative: Africa,2019,1164118622
+Belt-Road Initiative: Asia,2019,1552928523
+Belt-Road Initiative: Europe,2019,414572416
+Belt-Road Initiative: Latin America and the Caribbean,2019,206761581
+Belt-Road Initiative: Pacific,2019,15183580
+Benin,2019,11801151
+Bermuda,2019,62508
+Bhutan,2019,763094
+Black Sea Economic Cooperation (BSEC),2019,342832245
+Bolivarian Alliance for the Americas (ALBA),2019,58535065
+Bolivia (Plurinational State of),2019,11513102
+"Bonaire, Sint Eustatius and Saba",2019,25983
+Bosnia and Herzegovina,2019,3300998
+Botswana,2019,2303703
+Brazil,2019,211049519
+British Virgin Islands,2019,30033
+Brunei Darussalam,2019,433296
+Bulgaria,2019,7000117
+Burkina Faso,2019,20321383
+Burundi,2019,11530577
+Cabo Verde,2019,549936
+Cambodia,2019,16486542
+Cameroon,2019,25876387
+Canada,2019,37411038
+Caribbean,2019,43335006
+Caribbean Community and Common Market (CARICOM),2019,18669459
+Cayman Islands,2019,64948
+Central African Republic,2019,4745179
+Central America,2019,177586525
+Central Asia,2019,73212111
+Central European Free Trade Agreement (CEFTA),2019,25839142
+Central and Southern Asia,2019,1991423507
+Chad,2019,15946882
+Channel Islands,2019,172264
+Chile,2019,18952035
+China,2019,1433783692
+China (and dependencies),2019,1465634176
+"China, Hong Kong SAR",2019,7436157
+"China, Macao SAR",2019,640446
+"China, Taiwan Province of China",2019,23773881
+Colombia,2019,50339443
+Commonwealth of Independent States (CIS),2019,289579128
+Commonwealth of Nations,2019,2529752075
+Commonwealth: Africa,2019,569747835
+Commonwealth: Asia,2019,1805540408
+Commonwealth: Caribbean and Americas,2019,44231064
+Commonwealth: Europe,2019,69169112
+Commonwealth: Pacific,2019,41063656
+Comoros,2019,850891
+Congo,2019,5380504
+Cook Islands,2019,17547
+Costa Rica,2019,5047561
+Countries with Access to the Sea,2019,7130128743
+Countries with Access to the Sea: Africa,2019,975801688
+Countries with Access to the Sea: Asia,2019,4437345520
+Countries with Access to the Sea: Europe,2019,678689328
+Countries with Access to the Sea: Latin America and the Caribbean,2019,629563215
+Countries with Access to the Sea: Northern America,2019,366600944
+Countries with Access to the Sea: Oceania,2019,42128048
+Croatia,2019,4130299
+Cuba,2019,11333484
+Curaçao,2019,163423
+Cyprus,2019,1198574
+Czechia,2019,10689213
+Côte d'Ivoire,2019,25716554
+North Korea,2019,25666158
+Democratic Republic of the Congo,2019,86790568
+Denmark,2019,5771877
+Denmark (and dependencies),2019,5877214
+Djibouti,2019,973557
+Dominica,2019,71808
+Dominican Republic,2019,10738957
+ECE: North America-2,2019,366475955
+ECE: UNECE-52,2019,1296492596
+ECLAC: Latin America,2019,636072786
+ECLAC: The Caribbean,2019,12044798
+ESCAP region: East and North-East Asia,2019,1648837239
+ESCAP region: North and Central Asia,2019,236086580
+ESCAP region: Pacific,2019,42115282
+ESCAP region: South and South-West Asia,2019,2001641003
+ESCAP region: South-East Asia,2019,662011846
+ESCAP: ADB Developing member countries (DMCs),2019,4029580432
+ESCAP: ADB Group A (Concessional assistance only),2019,162966739
+ESCAP: ADB Group B (OCR blend),2019,1792323367
+ESCAP: ADB Group C (Regular OCR only),2019,2074290326
+ESCAP: ASEAN,2019,660718726
+ESCAP: Central Asia,2019,90214320
+ESCAP: ECO,2019,504210404
+ESCAP: HDI groups,2019,4590691950
+ESCAP: Landlocked countries (LLDCs),2019,164025746
+ESCAP: Least Developed Countries (LDCs),2019,310553245
+ESCAP: Pacific island dev. econ.,2019,12129020
+ESCAP: SAARC,2019,1835297503
+ESCAP: WB High income econ.,2019,223183438
+ESCAP: WB Low income econ.,2019,92316630
+ESCAP: WB Lower middle income econ.,2019,2387495225
+ESCAP: WB Upper middle income econ.,2019,1887677496
+ESCAP: WB income groups,2019,4590672789
+ESCAP: high HDI,2019,222610632
+ESCAP: high income,2019,222836176
+ESCAP: income groups,2019,4590691950
+ESCAP: low HDI,2019,1911735616
+ESCAP: low income,2019,2073030029
+ESCAP: lower middle HDI,2019,2057885279
+ESCAP: lower middle income,2019,580268276
+ESCAP: other Asia-Pacific countries/areas,2019,197481050
+ESCAP: upper middle HDI,2019,398460423
+ESCAP: upper middle income,2019,1714557469
+ESCWA: Arab countries,2019,428166389
+ESCWA: Arab least developed countries,2019,93768211
+ESCWA: Gulf Cooperation Council countries,2019,57694359
+ESCWA: Maghreb countries,2019,97996994
+ESCWA: Mashreq countries,2019,178706825
+ESCWA: member countries,2019,367845981
+East African Community (EAC),2019,190068644
+Eastern Africa,2019,433904943
+Eastern Asia,2019,1672611120
+Eastern Europe,2019,293444921
+Eastern European Group,2019,340313688
+Eastern and South-Eastern Asia,2019,2334622966
+Economic Community of Central African States (ECCAS),2019,198465942
+Economic Community of West African States (ECOWAS),2019,386908388
+Economic Cooperation Organization (ECO),2019,504210404
+Ecuador,2019,17373657
+Egypt,2019,100388076
+El Salvador,2019,6453550
+Equatorial Guinea,2019,1355982
+Eritrea,2019,3497117
+Estonia,2019,1325649
+Eswatini,2019,1148133
+Ethiopia,2019,112078727
+Eurasian Economic Community (Eurasec),2019,222594686
+Europe,2019,747182815
+Europe,2019,747182815
+Europe (48),2019,747182815
+Europe and Northern America,2019,1113783759
+European Community (EC: 12),2019,384069996
+European Free Trade Agreement (EFTA),2019,14347277
+European Union (EU: 15),2019,408593654
+European Union (EU: 28),2019,512516929
+Falkland Islands (Malvinas),2019,3372
+Faroe Islands,2019,48677
+Fiji,2019,889955
+Finland,2019,5532159
+France,2019,65129731
+France (and dependencies),2019,67978398
+French Guiana,2019,290823
+French Polynesia,2019,279285
+Gabon,2019,2172578
+Gambia,2019,2347696
+Georgia,2019,3996762
+Germany,2019,83517046
+Ghana,2019,30417858
+Gibraltar,2019,33706
+Greater Arab Free Trade Area (GAFTA),2019,406373337
+Greece,2019,10473452
+Greenland,2019,56660
+Grenada,2019,112002
+Group of 77 (G77),2019,6060094962
+Group of Eight (G8),2019,915935544
+Group of Seven (G7),2019,770063284
+Group of Twenty (G20) - member states,2019,4622853206
+Guadeloupe,2019,400048
+Guam,2019,167295
+Guatemala,2019,17581476
+Guinea,2019,12771246
+Guinea-Bissau,2019,1920917
+Gulf Cooperation Council (GCC),2019,57694359
+Guyana,2019,782775
+Haiti,2019,11263079
+High-income countries,2019,1258043484
+Holy See,2019,815
+Honduras,2019,9746115
+Hungary,2019,9684680
+Iceland,2019,339037
+India,2019,1366417756
+Indonesia,2019,270625567
+Iran,2019,82913893
+Iraq,2019,39309789
+Ireland,2019,4882498
+Isle of Man,2019,84589
+Israel,2019,8519373
+Italy,2019,60550092
+Jamaica,2019,2948277
+Japan,2019,126860299
+Jordan,2019,10101697
+Kazakhstan,2019,18551428
+Kenya,2019,52573967
+Kiribati,2019,117608
+Kuwait,2019,4207077
+Kyrgyzstan,2019,6415851
+LLDC: Africa,2019,332262488
+LLDC: Asia,2019,164025746
+LLDC: Europe,2019,6126716
+LLDC: Latin America,2019,18557741
+Land-locked Countries,2019,583340277
+Land-locked Countries (Others),2019,62367586
+Land-locked Developing Countries (LLDC),2019,520972691
+Lao People's Democratic Republic,2019,7169456
+Latin America and the Caribbean,2019,648120956
+Latin America and the Caribbean,2019,648120956
+Latin American Integration Association (ALADI),2019,568696545
+Latin American and Caribbean Group (GRULAC),2019,643474175
+Latvia,2019,1906740
+"League of Arab States (LAS, informal name: Arab League)",2019,428166389
+Least developed countries,2019,1033388868
+Least developed: Africa,2019,682410622
+Least developed: Asia,2019,338616201
+Least developed: Latin America and the Caribbean,2019,11263079
+Least developed: Oceania,2019,1098966
+Lebanon,2019,6855709
+Lesotho,2019,2125267
+Less developed regions,2019,6442837885
+"Less developed regions, excluding China",2019,4977203709
+"Less developed regions, excluding least developed countries",2019,5409449017
+Less developed: Africa,2019,1308064176
+Less developed: Asia,2019,4474510967
+Less developed: Latin America and the Caribbean,2019,648120956
+Less developed: Oceania,2019,12141786
+Liberia,2019,4937374
+Libya,2019,6777453
+Liechtenstein,2019,38020
+Lithuania,2019,2759631
+Low-income countries,2019,755849741
+Lower-middle-income countries,2019,3057708884
+Luxembourg,2019,615730
+Madagascar,2019,26969306
+Malawi,2019,18628749
+Malaysia,2019,31949789
+Maldives,2019,530957
+Mali,2019,19658023
+Malta,2019,440377
+Marshall Islands,2019,58791
+Martinique,2019,375557
+Mauritania,2019,4525698
+Mauritius,2019,1269670
+Mayotte,2019,266153
+Melanesia,2019,10918534
+Mexico,2019,127575529
+Micronesia,2019,543483
+Micronesia (Fed. States of),2019,113811
+Middle Africa,2019,174308427
+Middle-income countries,2019,5696667314
+Monaco,2019,38967
+Mongolia,2019,3225166
+Montenegro,2019,627988
+Montserrat,2019,4991
+More developed regions,2019,1270630320
+More developed: Asia,2019,126860299
+More developed: Europe,2019,747182815
+More developed: Northern America,2019,366600944
+More developed: Oceania,2019,29986262
+Morocco,2019,36471766
+Mozambique,2019,30366043
+Myanmar,2019,54045422
+Namibia,2019,2494524
+Nauru,2019,10764
+Nepal,2019,28608715
+Netherlands,2019,17097123
+Netherlands (and dependencies),2019,17435228
+New Caledonia,2019,282757
+New EU member states (joined since 2004),2019,103923275
+New Zealand,2019,4783062
+New Zealand (and dependencies),2019,4803553
+Nicaragua,2019,6545503
+Niger,2019,23310719
+Nigeria,2019,200963603
+Niue,2019,1614
+No income group available,2019,2907666
+Non-Self-Governing Territories,2019,1731701
+North American Free Trade Agreement (NAFTA),2019,494051484
+North Atlantic Treaty Organization (NATO),2019,940604181
+North Macedonia,2019,2083458
+Northern Africa,2019,241780765
+Northern Africa and Western Asia,2019,517105558
+Northern America,2019,366600944
+Northern America,2019,366600944
+Northern Europe,2019,105768532
+Northern Mariana Islands,2019,57213
+Norway,2019,5378859
+Oceania,2019,42128048
+Oceania (excluding Australia and New Zealand),2019,12141786
+Oman,2019,4974992
+Organisation for Economic Co-operation and Development (OECD),2019,1307716642
+Organization for Security and Co-operation in Europe (OSCE),2019,1291387201
+Organization of American States (OAS),2019,1009950130
+Organization of Petroleum Exporting countries (OPEC),2019,507887773
+Organization of the Islamic Conference (OIC),2019,1872842323
+Pakistan,2019,216565317
+Palau,2019,18001
+Panama,2019,4246440
+Papua New Guinea,2019,8776119
+Paraguay,2019,7044639
+Peru,2019,32510462
+Philippines,2019,108116622
+Poland,2019,37887771
+Polynesia,2019,679769
+Portugal,2019,10226178
+Puerto Rico,2019,2933404
+Qatar,2019,2832071
+South Korea,2019,51225321
+Republic of Moldova,2019,4043258
+Romania,2019,19364558
+Russian Federation,2019,145872260
+Rwanda,2019,12626938
+Réunion,2019,888932
+"SIDS Atlantic, and Indian Ocean, Mediterranean and South China Sea (AIMS)",2019,15990784
+SIDS Caribbean,2019,43309023
+SIDS Pacific,2019,12129020
+Saint Barthélemy,2019,9853
+Saint Helena,2019,6061
+Saint Kitts and Nevis,2019,52834
+Saint Lucia,2019,182795
+Saint Martin (French part),2019,38002
+Saint Pierre and Miquelon,2019,5821
+Saint Vincent and the Grenadines,2019,110593
+Samoa,2019,197093
+San Marino,2019,33864
+Sao Tome and Principe,2019,215048
+Saudi Arabia,2019,34268529
+Senegal,2019,16296362
+Serbia,2019,8772228
+Seychelles,2019,97741
+Shanghai Cooperation Organization (SCO),2019,3229909042
+Sierra Leone,2019,7813207
+Singapore,2019,5804343
+Sint Maarten (Dutch part),2019,42389
+Slovakia,2019,5457012
+Slovenia,2019,2078654
+Small Island Developing States (SIDS),2019,71428827
+Solomon Islands,2019,669821
+Somalia,2019,15442906
+South Africa,2019,58558267
+South America,2019,427199425
+South Asian Association for Regional Cooperation (SAARC),2019,1835297503
+South Sudan,2019,11062114
+South-Eastern Asia,2019,662011846
+Southern Africa,2019,66629894
+Southern African Development Community (SADC),2019,353940129
+Southern Asia,2019,1918211396
+Southern Common Market (MERCOSUR),2019,306365495
+Southern Europe,2019,152446950
+Spain,2019,46736782
+Sri Lanka,2019,21323734
+State of Palestine,2019,4981422
+Sub-Saharan Africa,2019,1066283411
+Sudan,2019,42813237
+Suriname,2019,581363
+Sweden,2019,10036391
+Switzerland,2019,8591361
+Syrian Arab Republic,2019,17070132
+Tajikistan,2019,9321023
+Thailand,2019,69625581
+Timor-Leste,2019,1293120
+Togo,2019,8082359
+Tokelau,2019,1330
+Tonga,2019,104497
+Trinidad and Tobago,2019,1394969
+Tunisia,2019,11694721
+Turkey,2019,83429607
+Turkmenistan,2019,5942094
+Turks and Caicos Islands,2019,38194
+Tuvalu,2019,11655
+UN-ECE: member countries,2019,1296680593
+UNFPA Regions,2019,6358800278
+UNFPA: Arab States (AS),2019,370070433
+UNFPA: Asia and the Pacific (AP),2019,4047949107
+UNFPA: East and Southern Africa (ESA),2019,601481415
+UNFPA: Eastern Europe and Central Asia (EECA),2019,248170834
+UNFPA: Latin America and the Caribbean (LAC),2019,644001843
+UNFPA: West and Central Africa (WCA),2019,447126646
+UNICEF PROGRAMME REGIONS,2019,6440543873
+UNICEF Programme Regions: East Asia and Pacific (EAPRO),2019,2129737711
+UNICEF Programme Regions: Eastern Caribbean,2019,2397227
+UNICEF Programme Regions: Eastern and Southern Africa (ESARO),2019,528864083
+UNICEF Programme Regions: Europe and Central Asia (CEECIS),2019,279293796
+UNICEF Programme Regions: Latin America,2019,640775552
+UNICEF Programme Regions: Latin America and Caribbean (LACRO),2019,643172779
+UNICEF Programme Regions: Middle East and North Africa (MENARO),2019,490260787
+UNICEF Programme Regions: South Asia (ROSA),2019,1835297503
+UNICEF Programme Regions: West and Central Africa (WCARO),2019,533917214
+UNICEF REGIONS,2019,7713468205
+UNICEF Regions: East Asia and Pacific,2019,2376751014
+UNICEF Regions: Eastern Europe and Central Asia,2019,425166056
+UNICEF Regions: Eastern and Southern Africa,2019,575173373
+UNICEF Regions: Europe and Central Asia,2019,922025316
+UNICEF Regions: Latin America and Caribbean,2019,648120956
+UNICEF Regions: Middle East and North Africa,2019,455575824
+UNICEF Regions: North America,2019,366600944
+UNICEF Regions: South Asia,2019,1835297503
+UNICEF Regions: Sub-Saharan Africa,2019,1109096648
+UNICEF Regions: West and Central Africa,2019,533923275
+UNICEF Regions: Western Europe,2019,496859260
+UNITED NATIONS Regional Groups of Member States,2019,7707903418
+Uganda,2019,44269587
+Ukraine,2019,43993643
+United Arab Emirates,2019,9770526
+United Kingdom,2019,67530161
+United Kingdom (and dependencies),2019,68045699
+United Nations Economic Commission for Africa (UN-ECA),2019,1306320572
+United Nations Economic Commission for Latin America and the Caribbean (UN-ECLAC),2019,648117584
+United Nations Economic and Social Commission for Asia and the Pacific (UN-ESCAP) Regions,2019,4590691950
+United Nations Member States,2019,7707903510
+United Republic of Tanzania,2019,58005461
+United States Virgin Islands,2019,104579
+United States,2019,329064917
+United States of America (and dependencies),2019,332382720
+Upper-middle-income countries,2019,2638958430
+Uruguay,2019,3461731
+Uzbekistan,2019,32981715
+Vanuatu,2019,299882
+Venezuela (Bolivarian Republic of),2019,28515829
+Viet Nam,2019,96462108
+WB region: East Asia and Pacific (excluding high income),2019,2129754531
+WB region: Europe and Central Asia (excluding high income),2019,421035757
+WB region: Latin America and Caribbean (excluding high income),2019,569811869
+WB region: Middle East and North Africa (excluding high income),2019,389753191
+WB region: South Asia (excluding high income),2019,1835297503
+WB region: Sub-Saharan Africa (excluding high income),2019,1106864204
+WHO Regions,2019,7668888226
+WHO: African region (AFRO),2019,1091758856
+WHO: Americas (AMRO),2019,1009950130
+WHO: Eastern Mediterranean Region (EMRO),2019,712276291
+WHO: European Region (EURO),2019,930166618
+WHO: South-East Asia region (SEARO),2019,2001946277
+WHO: Western Pacific region (WPRO),2019,1922790054
+Wallis and Futuna Islands,2019,11436
+West African Economic and Monetary Union (UEMOA),2019,127107468
+Western Africa,2019,391440147
+Western Asia,2019,275324793
+Western Europe,2019,195522412
+Western European and Others Group (WEOG),2019,919088423
+Western Sahara,2019,582458
+World,2019,7713468205
+World Bank Regional Groups (developing only),2019,6452517055
+Yemen,2019,29161922
+Zambia,2019,17861034
+Zimbabwe,2019,14645473
