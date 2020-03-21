@@ -13,16 +13,21 @@ def get_country_population(country):
     df = pd.read_csv(url, sep=';')
 
     from_to = {}
-    from_to['Brazil'] = 'Brasil'
     from_to['Austria'] = 'Áustria'
     from_to['Belgium'] = 'Bélgica'
+    from_to['Brazil'] = 'Brasil'
+    from_to['Denmark'] = 'Dinamarca'
     from_to['France'] = 'França'
     from_to['Germany'] = 'Alemanha'
     from_to['Iran'] = 'Irã'
     from_to['Italy'] = 'Itália'
+    from_to['Japan'] = 'Japão'
+    from_to['Malaysia'] = 'Malásia'
     from_to['Netherlands'] = 'Países Baixos'
+    from_to['Norway'] = 'Noruega'
     from_to['South Korea'] = 'Coréia do Sul'
     from_to['Spain'] = 'Espanha'
+    from_to['Sweden'] = 'Suécia'
     from_to['Switzerland'] = 'Suíça'
     from_to['United Kingdom'] = 'Reino Unido'
     from_to['United States'] = 'Estados Unidos'
@@ -85,11 +90,12 @@ if __name__ == '__main__':
     # Plot curves
     legend_curves = []
     for country in countries:
-        if plot_country(df, country, normalize, False):
+        emphasis = ['Brazil']
+        if plot_country(df, country, normalize, country in emphasis):
             legend_curves.append(country)
             
     # plot Brazil
-    if 'Brazil' not in countries:
+    if 'Brazil' not in countries.values:
         if plot_country(df, 'Brazil', normalize, True):
             legend_curves.append('Brazil')
     
