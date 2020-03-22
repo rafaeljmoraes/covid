@@ -8,39 +8,16 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-def get_country_population(country):
-    url = "100005.csv"
-    df = pd.read_csv(url)
+from CovidDatabase import CovidDatabase
 
-    result = df[df['Location'] == country]['PopTotal']
-    if result.empty:
-        return 0
-    else:
-        return int(result)
-    
-    
-def get_covid_data():
-    url = "https://covid.ourworldindata.org/data/ecdc/full_data.csv"
-    return pd.read_csv(url)
 
-def build_days_column(df, minimal_cases = 1):
-    df = df.loc[:, ['date', 'location', 'total_cases']]
-    df = df[df['total_cases'] >= minimal_cases]
-    df['days'] = 0
-    
-    countries = df['location'].drop_duplicates()
-    for country in countries:
-        country_df = df[df['location'] == country]
-        index = country_df.index
-        df.loc[index, 'days'] = range(1, index.size + 1)
-    return df
-
-def plot_country(df, country, show_from, normalize, emphasis):
+def plot_country(covid_database, country, show_from, normalize, emphasis):
+    df = covid_database.get_data()
     country_df = df[df['location'] == country]
     total_cases = country_df['total_cases']
     plot = True
     if normalize:
-        population = get_country_population(country)
+        population = covid_database.get_country_population(country)
         if population > 0:
             total_cases = total_cases / population
             if total_cases.max() < show_from:
@@ -60,7 +37,9 @@ def plot_country(df, country, show_from, normalize, emphasis):
             plt.plot(country_df['days'], total_cases)
     return plot
 
-def create_plot(df, minimal_cases, show_from, normalize, title=None, export_file=''):
+def create_plot(covid_database, minimal_cases, show_from, normalize, title=None, export_file=''):
+    df = covid_database.get_data()
+    
     # Create new plot
     plt.figure()
 
@@ -76,12 +55,12 @@ def create_plot(df, minimal_cases, show_from, normalize, title=None, export_file
     legend_curves = []
     for country in countries:
         if country not in include:
-            if plot_country(df, country, show_from, normalize, country in include):
+            if plot_country(covid_database, country, show_from, normalize, country in include):
                 legend_curves.append(country)
             
     # plot included countries
     for country in include:
-        if plot_country(df, country, 0, normalize, True):
+        if plot_country(covid_database, country, 0, normalize, True):
             legend_curves.append(country)
     
     # Add plot information
@@ -100,10 +79,11 @@ def create_plot(df, minimal_cases, show_from, normalize, title=None, export_file
         plt.savefig(export_file)
               
 if __name__ == '__main__':
+    covid_database = CovidDatabase()
     minimal_cases = 100
-    show_from = 2000
-    df = get_covid_data()
-    df = build_days_column(df, minimal_cases)
-    create_plot(df, minimal_cases, 5e-4, True, None, 'normalized.png')
-    create_plot(df, minimal_cases, 2e-4, True, None, 'normalized2.png')
-    create_plot(df, minimal_cases, show_from, False, None, 'absolute.png')
+    covid_database.build_days_column(minimal_cases)
+    df = covid_database.get_data()
+    
+    create_plot(covid_database, minimal_cases, 5e-4, True, None, 'normalized.png')
+    create_plot(covid_database, minimal_cases, 2.3e-4, True, None, 'normalized2.png')
+    create_plot(covid_database, minimal_cases, 2000, False, None, 'absolute.png')
