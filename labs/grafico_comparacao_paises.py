@@ -65,20 +65,24 @@ def create_plot(df, minimal_cases, show_from, normalize, title=None, export_file
     plt.figure()
 
     # Get countries to show (remove World data)
+    include = ['Brazil']
     countries = df['location'].drop_duplicates()
-    countries = countries.where(countries != 'World').dropna()
+    if normalize:
+        include.append('World')
+    else:
+        countries = countries.where(countries != 'World').dropna()
 
     # Plot curves
     legend_curves = []
     for country in countries:
-        emphasis = ['Brazil']
-        if plot_country(df, country, show_from, normalize, country in emphasis):
-            legend_curves.append(country)
+        if country not in include:
+            if plot_country(df, country, show_from, normalize, country in include):
+                legend_curves.append(country)
             
-    # plot Brazil
-    if 'Brazil' not in countries.values:
-        if plot_country(df, 'Brazil', show_from, normalize, True):
-            legend_curves.append('Brazil')
+    # plot included countries
+    for country in include:
+        if plot_country(df, country, 0, normalize, True):
+            legend_curves.append(country)
     
     # Add plot information
     if title:
