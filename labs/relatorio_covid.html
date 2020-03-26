@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Relatório Corona Virus</title>
+</head>
+
+<body>
+<h1>Introdução</h1>
+<p>Os dados desse relatório foram obtidos das seguintes bases de dados:</p>
+<ul>
+<li>Pandemia: https://ourworldindata.org/coronavirus-source-data</li>
+<li>População: https://population.un.org/wpp/Download/Standard/CSV/</li>
+</ul>
+
+<h1>Histórico</h1>
+<p>O gráfico abaixo apresenta o número de casos reportados por país, em valores absolutos.</p>
+<p><img src='absolute.png' /></p>
+
+<p>O gráfico abaixo apresenta o número de casos reportados por país, em relação ao tamanho de sua população.</p>
+<p><img src='normalized2.png' /></p>
+
+<p>Este gráfico é um zoom do anterior, mostrando apenas os países que já passaram de 0.05%.</p>
+<p><img src='normalized.png' /></p>
+
+<h1>Previsão</h1>
+<p>Serão apresentadas duas abordagens: a primeira leva em conta estatísticas dos países que estão à frente do Brasil.</p>
+<p><img src='growth_percentiles.png' /></p>
+<p>Cabe ressaltar que o número de dados a serem considerados não são suficientes para uma análise estatística.</p>
+<p><img src='number_of_countries.png' /></p>
+<p>A segunda abordagem é a considerada no relatório da Abin. Nela são construídos 3 cenários:</p>
+<ul>
+<li>Cenário I: 'Iran', 'Italy', 'China'</li>
+<li>Cenário II: 'France', 'Germany'</li>
+<li>Cenário III: 'Japan', 'Australia'</li>
+</ul>
+<p><img src='growth_countries.png' /></p>
+
+<h2> Previsão 1 - abordagem estatística</h2>
+<p>Serão usadas as taxas de crescimento P10, P50 e P90.</p>
+<p><img src='forecast1_growth.png' /></p>
+<p><img src='forecast1_cases.png' /></p>
+
+<h2> Previsão 2 - abordagem por cenários</h2>
+<p>Serão usadas as taxas de crescimento dos 3 cenários.</p>
+<ul>
+<li>Cenário I: 'Iran', 'Italy', 'China'</li>
+<li>Cenário II: 'France', 'Germany'</li>
+<li>Cenário III: 'Japan', 'Australia'</li>
+</ul>
+<p><img src='forecast2_growth.png' /></p>
+<p><img src='forecast2_cases.png' /></p>
+
+</body>
+
+
+</html>
