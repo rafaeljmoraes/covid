@@ -19,7 +19,7 @@ if __name__ == '__main__':
     plot1.create_plot(minimal_cases, 5e-4, True, None, 'normalized.png')
 
     plot2 = Plot(covid_database)
-    plot2.create_plot(minimal_cases, 2.3e-4, True, None, 'normalized2.png')
+    plot2.create_plot(minimal_cases, 3e-4, True, None, 'normalized2.png')
 
     plot3 = Plot(covid_database)
-    plot3.create_plot(minimal_cases, 2000, False, None, 'absolute.png')
+    plot3.create_plot(minimal_cases, 2500, False, None, 'absolute.png')
