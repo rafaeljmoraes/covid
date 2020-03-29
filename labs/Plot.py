@@ -43,7 +43,8 @@ class Plot:
         df = self._covid_database.get_data()
         
         # Get countries to show (remove World data)
-        include = ['Brazil']
+        include = ['Brazil', 'China', 'United States']
+        #include = ['Brazil']
         countries = df['location'].drop_duplicates()
         if normalize:
             include.append('World')
