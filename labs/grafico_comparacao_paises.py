@@ -16,10 +16,10 @@ if __name__ == '__main__':
     df = covid_database.get_data()
 
     plot1 = Plot(covid_database)
-    plot1.create_plot(minimal_cases, 5e-4, True, None, 'normalized.png')
+    plot1.create_plot(minimal_cases, 2e-3, True, None, 'normalized.png')
 
     plot2 = Plot(covid_database)
-    plot2.create_plot(minimal_cases, 3e-4, True, None, 'normalized2.png')
+    plot2.create_plot(minimal_cases, 1e-3, True, None, 'normalized2.png')
 
     plot3 = Plot(covid_database)
-    plot3.create_plot(minimal_cases, 2500, False, None, 'absolute.png')
+    plot3.create_plot(minimal_cases, 6000, False, None, 'absolute.png')
