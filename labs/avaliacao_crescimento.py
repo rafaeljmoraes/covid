@@ -11,6 +11,12 @@ import matplotlib.pyplot as plt
 
 from CovidDatabase import CovidDatabase
 
+
+def build_growth_column(df):
+    df['growth'] = np.power(df['total_cases'] / df['total_cases'].min(), 1 / (df['days']-1)) - 1
+    return df
+
+    
 def get_forecast(df, start, ndays, forecast, countries = [], country_groups = []):
     x = range(start, ndays + forecast + 1)
 
@@ -75,12 +81,12 @@ if __name__ == '__main__':
     covid_database = CovidDatabase()
     minimal_cases = 100
     forecast = 30 #days
-    plot_forecast = 15
+    plot_forecast = 7
     start = 5 #days
     covid_database.build_days_column(minimal_cases)
     df = covid_database.get_data()
+    df = build_growth_column(df)
 
-    df['growth'] = np.power(df['total_cases'] / df['total_cases'].min(), 1 / (df['days']-1)) - 1
 
     brazil_df = df[df['location'] == 'Brazil']
     brazil_df = brazil_df[brazil_df['days'] >= start]
@@ -89,12 +95,29 @@ if __name__ == '__main__':
 
     countries = ['Iran', 'Italy', 'China', 'France', 'Germany', 'Japan', 
                  'Australia', 'Spain', 'United States', 'Austria', 'Belgium', 
-                 'Netherlands', 'South Korea', 'Switzerland', 'United Kingdom']
+                 'Netherlands', 'South Korea', 'Switzerland', 'United Kingdom',
+                 'Canada', 'Hong Kong']
     df_forecast = get_forecast(df, start, ndays, forecast, countries)
     df_forecast.to_csv('previsao.csv', index=False)
 
     plot_growth(df_forecast, ['P10', 'P50', 'P90'], max_days)
+    scenario_df = df[df['location'] == 'Brazil']
+    scenario_df = scenario_df[scenario_df['days'] <= max_days]
+    plt.plot(scenario_df['days'], scenario_df['growth'], 'ko')
+
     plot_growth(df_forecast, countries, max_days)
+    scenario_df = df[df['location'] == 'Brazil']
+    scenario_df = scenario_df[scenario_df['days'] <= max_days]
+    plt.plot(scenario_df['days'], scenario_df['growth'], 'ko')
+
+    plot_growth(df_forecast, ['P50', 'Germany', 'Belgium', 'Netherlands'], max_days)
+    scenario_df = df[df['location'] == 'Brazil']
+    scenario_df = scenario_df[scenario_df['days'] <= max_days]
+    plt.plot(scenario_df['days'], scenario_df['growth'], 'ko')
     
     plot_brazil_forecast(df_forecast, brazil_df, ['P10', 'P50', 'P90'], max_days)
     plot_brazil_forecast(df_forecast, brazil_df, countries, max_days)
+    plot_brazil_forecast(df_forecast, brazil_df, ['Iran', 'Germany', 'Japan', 'Belgium', 'Netherlands'], max_days)
+    plot_brazil_forecast(df_forecast, brazil_df, ['P50', 'Germany', 'Belgium', 'Netherlands'], max_days)
+    plot_brazil_forecast(df_forecast, brazil_df, ['Iran', 'Germany', 'Japan', 'Netherlands', 'Canada', 'Hong Kong'], max_days)
+    plot_brazil_forecast(df_forecast, brazil_df, ['Canada', 'Hong Kong'], max_days)
