@@ -34,7 +34,7 @@ class Plot:
             print("%s, %.2f%%" % (country, total_cases.max()))
         if plot:
             if emphasis:
-                plt.plot(country_df['days'], total_cases, marker='o', markersize=12, linewidth=4)
+                plt.plot(country_df['days'], total_cases, marker='o', markersize=8, linewidth=4)
             else:
                 plt.plot(country_df['days'], total_cases)
         return plot
