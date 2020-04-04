@@ -13,10 +13,21 @@ from CovidDatabase import CovidDatabase
 
 
 def build_growth_column(df):
-    df['growth'] = np.power(df['total_cases'] / df['total_cases'].min(), 1 / (df['days']-1)) - 1
-    #window = 7
-    #df['growth'] = np.power(df['total_cases'].shift(-window) / df['total_cases'], 1 / window) - 1
-    #df.loc[ (df['days'].shift(-window) - df['days']) != window , 'growth'] = np.nan
+    #df['growth'] = np.power(df['total_cases'] / df['total_cases'].min(), 1 / (df['days']-1)) - 1
+    window = 7
+    right_window = window // 2
+    left_window = window - right_window
+    df['growth'] = np.power(df['total_cases'].shift(-right_window) / df['total_cases'].shift(left_window), 1 / window) - 1
+    df.loc[ (df['days'].shift(-right_window) - df['days'].shift(left_window)) != window , 'growth'] = np.nan
+
+    # Postergação das curvas mantendo o último crescimento
+    countries = df['location'].drop_duplicates()
+    for country in countries:
+        country_df = df[df['location'] == country].dropna()
+        if not country_df.empty:
+            last_growth = country_df['growth'].values[-1]
+            last_days = country_df['days'].values[-1]
+            df.loc[(df['days'] > last_days) & (df['location'] == country), 'growth'] = last_growth
     return df
 
     
@@ -84,7 +95,7 @@ if __name__ == '__main__':
     covid_database = CovidDatabase()
     minimal_cases = 100
     forecast = 30 #days
-    plot_forecast = 7
+    plot_forecast = 14
     start = 5 #days
     covid_database.build_days_column(minimal_cases)
     df = covid_database.get_data()
@@ -119,10 +130,10 @@ if __name__ == '__main__':
     plt.plot(scenario_df['days'], scenario_df['growth'], 'ko')
     
     plot_brazil_forecast(df_forecast, brazil_df, ['P10', 'P50', 'P90'], max_days)
-    plot_brazil_forecast(df_forecast, brazil_df, ['Spain', 'Netherlands', 'Japan'], max_days)
+    plot_brazil_forecast(df_forecast, brazil_df, ['Italy', 'Netherlands', 'Japan'], max_days)
     plot_brazil_forecast(df_forecast, brazil_df, countries, max_days)
     plot_brazil_forecast(df_forecast, brazil_df, ['P10', 'Japan', 'South Korea'], max_days)
-    plot_brazil_forecast(df_forecast, brazil_df, ['P50', 'Germany', 'Belgium', 'Netherlands', 'South Korea'], max_days)
+    plot_brazil_forecast(df_forecast, brazil_df, ['P50', 'Germany', 'Belgium', 'Netherlands'], max_days)
     plot_brazil_forecast(df_forecast, brazil_df, ['P90', 'Iran', 'Spain', 'Italy'], max_days)
     #plot_brazil_forecast(df_forecast, brazil_df, ['Iran', 'Germany', 'Japan', 'Belgium', 'Netherlands'], max_days)
     #plot_brazil_forecast(df_forecast, brazil_df, ['Iran', 'Germany', 'Japan', 'Netherlands', 'Canada', 'Hong Kong'], max_days)
