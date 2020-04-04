@@ -14,6 +14,9 @@ from CovidDatabase import CovidDatabase
 
 def build_growth_column(df):
     df['growth'] = np.power(df['total_cases'] / df['total_cases'].min(), 1 / (df['days']-1)) - 1
+    #window = 7
+    #df['growth'] = np.power(df['total_cases'].shift(-window) / df['total_cases'], 1 / window) - 1
+    #df.loc[ (df['days'].shift(-window) - df['days']) != window , 'growth'] = np.nan
     return df
 
     
@@ -25,7 +28,7 @@ def get_forecast(df, start, ndays, forecast, countries = [], country_groups = []
     df_forecast = pd.DataFrame(columns=forecast_columns)
     data = []
     for t in x:
-        growth = df[df['days'] == t]['growth']
+        growth = df[df['days'] == t]['growth'].dropna()
         data.append([t, 'P10', np.percentile(growth, 10)])
         data.append([t, 'P50', np.percentile(growth, 50)])
         data.append([t, 'P90', np.percentile(growth, 90)])
