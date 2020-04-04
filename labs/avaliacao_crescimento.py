@@ -95,7 +95,7 @@ if __name__ == '__main__':
     covid_database = CovidDatabase()
     minimal_cases = 100
     forecast = 30 #days
-    plot_forecast = 14
+    plot_forecast = 7
     start = 5 #days
     covid_database.build_days_column(minimal_cases)
     df = covid_database.get_data()
